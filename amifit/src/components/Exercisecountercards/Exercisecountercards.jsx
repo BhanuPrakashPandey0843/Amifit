@@ -53,11 +53,16 @@ export default function Exercisecountercards() {
   };
 
   return (
+    
     <section
       className="section service active"
       aria-label="service"
       data-section
     >
+        <div className="title-wrapper">
+          <p className="section-subtitle">05+ Exercise Counter Available</p>
+          <h2 className="h2 section-title">Focus on technique not count</h2>
+        </div>
       <div className="container">
         <ul className="grid-list">
           {services.map((service, index) => (
