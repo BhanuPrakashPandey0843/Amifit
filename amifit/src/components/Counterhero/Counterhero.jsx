@@ -3,7 +3,7 @@ import { IoArrowForward } from 'react-icons/io5';
 
 const Counterhero = () => {
   const openPDF = () => {
-    window.open('/docs/exercise-guide.pdf', '_blank'); // Make sure this path is correct
+    window.open('/docs/exercise-guide.pdf', '_blank'); 
   };
 
   return (
@@ -11,7 +11,7 @@ const Counterhero = () => {
       <div className="container text-center">
         <p className="hero-subtitle">Smart Fitness AI</p>
         <h1 className="h1 hero-title">AI-Powered Exercise Counter</h1>
-        <p className="hero-text section-text">
+        <p ctlassName="hero-text section-text">
           05+ intelligent workout trackers that monitor form, count reps, and guide your fitness journey.
         </p>
 

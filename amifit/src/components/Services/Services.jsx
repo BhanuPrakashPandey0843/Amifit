@@ -30,7 +30,7 @@ const services = [
 export default function Services() {
   return (
     <section
-      className="section service active" // <-- manually added "active" to make it show immediately
+      className="section service active" 
       aria-label="service"
       data-section
     >
