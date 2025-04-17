@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { IoMenuOutline, IoCloseOutline } from 'react-icons/io5';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [navActive, setNavActive] = useState(false);
@@ -17,24 +18,40 @@ const Navbar = () => {
   return (
     <header className={`header${headerActive ? ' active' : ''}`} data-header>
       <div className="container">
-        <a href="#" className="logo">Futras<span className="span">.</span></a>
+        <Link to="/" className="logo">
+          AmiFit<span className="span">.</span>
+        </Link>
+
         <nav className={`navbar${navActive ? ' active' : ''}`} data-navbar>
           <button className="nav-toggle-btn" onClick={toggleNavbar} aria-label="close menu">
             <IoCloseOutline />
           </button>
+
           <ul className="navbar-list">
-            {['home', 'about', 'course', 'blog'].map((item) => (
-              <li key={item} className="navbar-item">
-                <a href={`#${item}`} className="navbar-link" onClick={closeNavbar}>{item.charAt(0).toUpperCase() + item.slice(1)}</a>
+            {[
+              { name: 'Home', path: '/' },
+              { name: 'Counter', path: '/counter' },
+              { name: 'Course', path: '/course' },
+              { name: 'Blog', path: '/blog' },
+              { name: 'Contact', path: '/contact' },
+            ].map((item) => (
+              <li key={item.name} className="navbar-item">
+                <Link to={item.path} className="navbar-link" onClick={closeNavbar}>
+                  {item.name}
+                </Link>
               </li>
             ))}
-            <li className="navbar-item"><a href="#" className="navbar-link" onClick={closeNavbar}>Contact</a></li>
           </ul>
         </nav>
-        <a href="#" className="btn btn-primary">Sign Up</a>
+
+        <Link to="/signup" className="btn btn-primary">
+          Sign Up
+        </Link>
+
         <button className="nav-toggle-btn" onClick={toggleNavbar} aria-label="open menu">
           <IoMenuOutline />
         </button>
+
         <div className={`overlay${navActive ? ' active' : ''}`} onClick={toggleNavbar}></div>
       </div>
     </header>

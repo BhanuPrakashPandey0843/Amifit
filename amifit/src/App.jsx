@@ -2,8 +2,10 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
+import BackToTopButton from "./components/BackToTopButton/BackToTopButton"
 import LandingPage from "./pages/LandingPage";
-
+import Exercisecountercards from "./pages/CounterPage"
+import "./index.css"
 
 
 const App = () => {
@@ -14,10 +16,12 @@ const App = () => {
         <main className="flex-grow">
           <Routes>
             <Route path="/" element={<LandingPage />} />
+            <Route path="/Counter" element={<Exercisecountercards />} />
         
           </Routes>
         </main>
         <Footer />
+        <BackToTopButton />
       </div>
     </Router>
   );

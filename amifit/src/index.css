@@ -8,7 +8,7 @@
    * colors
    */
 
-  --blue-green-color-wheel_60: hsla(165, 77%, 17%, 0.6);
+  --blue-green-color-wheel_60: hsla(165, 77%, 17%, 0.6);  
   --blue-green-color-wheel_10: hsla(165, 77%, 17%, 0.1);
   --blue-green-color-wheel: hsl(165, 77%, 17%);
   --black-chocolate: hsl(32, 24%, 14%);
@@ -231,7 +231,7 @@ body {
   transform: translate(-50%, -50%);
   width: 120px;
   height: 160px;
-  background-image: url('../images/title-shape-white.png');
+  background-image: url('./assets/images/title-shape-white.png');
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -563,7 +563,7 @@ body {
   left: -20px;
   width: 100px;
   height: 100px;
-  background-image: url('../images/about-shape-1.png');
+  background-image: url('./assets/images/about-shape-1.png');
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -606,7 +606,7 @@ body {
   right: -20px;
   width: 110px;
   height: 110px;
-  background-image: url('../images/about-shape-2.png');
+  background-image: url('./assets//images/about-shape-2.png');
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
