@@ -5,6 +5,7 @@ import Footer from "./components/Footer/Footer";
 import BackToTopButton from "./components/BackToTopButton/BackToTopButton"
 import LandingPage from "./pages/LandingPage";
 import Exercisecountercards from "./pages/CounterPage"
+import from "./pages/"
 import "./index.css"
 
 
@@ -17,7 +18,7 @@ const App = () => {
           <Routes>
             <Route path="/" element={<LandingPage />} />
             <Route path="/Counter" element={<Exercisecountercards />} />
-        
+            <Route path="" element={< />}/>
           </Routes>
         </main>
         <Footer />
