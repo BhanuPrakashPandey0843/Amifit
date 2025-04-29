@@ -5,9 +5,11 @@ import Footer from "./components/Footer/Footer";
 import BackToTopButton from "./components/BackToTopButton/BackToTopButton"
 import LandingPage from "./pages/LandingPage";
 import Exercisecountercards from "./pages/CounterPage"
-import from "./pages/"
+import Recommendation from "./pages/RecommendationPage"
+import BMICalculatorPage from "./pages/BMICalculatorPage"
+import BMRCalculatorPage from "./pages/BMRCalculatorPage"
+import CalorieCalculatorPage from "./pages/CalorieCalculatorPage"
 import "./index.css"
-
 
 const App = () => {
   return (
@@ -18,7 +20,10 @@ const App = () => {
           <Routes>
             <Route path="/" element={<LandingPage />} />
             <Route path="/Counter" element={<Exercisecountercards />} />
-            <Route path="" element={< />}/>
+            <Route path="/recommendation" element={<Recommendation />} />
+            <Route path="/BMICalculatorPage" element={<BMICalculatorPage />} />
+            <Route path="/BMRCalculatorPage" element={<BMRCalculatorPage />} />
+            <Route path="/CalorieCalculatorPage" element={<CalorieCalculatorPage />} />
           </Routes>
         </main>
         <Footer />

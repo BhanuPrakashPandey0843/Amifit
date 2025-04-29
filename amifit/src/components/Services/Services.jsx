@@ -1,36 +1,39 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import { IoArrowForward } from "react-icons/io5";
 import service1 from "../../assets/images/service-1.svg";
 import service2 from "../../assets/images/service-2.svg";
 import service3 from "../../assets/images/service-3.svg";
-import { IoArrowForward } from "react-icons/io5";
 
 const services = [
   {
-    title: "Women’s Course",
-    text: "Lorem Ipsum is simply dummy themes industryes psum has been them industry the loep into type setting.",
+    title: "BMR Calculator",
+    text: "Estimates the number of calories your body needs at rest to maintain basic functions.",
     img: service1,
-    alt: "Women’s Course",
+    alt: "BMR Calculator",
+    route: "/BMRCalculatorPage",
   },
   {
-    title: "Basic Course",
-    text: "Lorem Ipsum is simply dummy themes industryes psum has been them industry the loep into type setting.",
+    title: "BMI Calculator",
+    text: "Determines if a person is underweight, normal, overweight, or obese based on height and weight.",
     img: service2,
-    alt: "Basic Course",
+    alt: "BMI Calculator",
+    route: "/BMICalculatorPage",
     active: true,
   },
   {
-    title: "Men’s Course",
-    text: "Lorem Ipsum is simply dummy themes industryes psum has been them industry the loep into type setting.",
+    title: "Calorie Calculator",
+    text: "Recommends daily calorie intake based on fitness goals (gain, lose, maintain weight).",
     img: service3,
-    alt: "Men’s Course",
+    alt: "Calorie Calculator",
+    route: "/CalorieCalculatorPage",
   },
-  
 ];
 
 export default function Services() {
   return (
     <section
-      className="section service active" 
+      className="section service active"
       aria-label="service"
       data-section
     >
@@ -51,14 +54,14 @@ export default function Services() {
                   />
                 </div>
                 <h3 className="h3">
-                  <a href="#" className="card-title">
+                  <Link to={service.route} className="card-title">
                     {service.title}
-                  </a>
+                  </Link>
                 </h3>
                 <p className="card-text">{service.text}</p>
-                <a href="#" className="btn btn-secondary">
+                <Link to={service.route} className="btn btn-secondary">
                   <IoArrowForward />
-                </a>
+                </Link>
               </div>
             </li>
           ))}

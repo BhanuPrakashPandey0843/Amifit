@@ -5,9 +5,11 @@ import About from "../components/About/About"
 import AppBanner from "../components/AppBanner/AppBanner"
 import Blog from "../components/Blog/Blog"
 import Course from "../components/Course/Course"
+
 const LandingPage = () => {
   return (
     <div>
+   
       <Hero />
       <Services />
        

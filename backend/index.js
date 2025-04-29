@@ -33,6 +33,11 @@ app.post("/api/recommend", async (req, res) => {
 // 💪 3. Start Exercise Counter
 app.post("/start-exercise", (req, res) => {
   const { exercise } = req.body;
+
+  if (!exercise) {
+    return res.status(400).send("❌ Missing exercise name");
+  }
+
   const scriptName = scriptMap[exercise];
 
   if (!scriptName) {
@@ -44,10 +49,12 @@ app.post("/start-exercise", (req, res) => {
 
   exec(command, (error, stdout, stderr) => {
     if (error) {
-      console.error(`❌ Error executing script: ${error}`);
-      return res.status(500).send("Failed to start exercise counter");
+      console.error(`❌ Error executing script: ${error.message}`);
+      console.error(`stderr: ${stderr}`);
+      return res.status(500).send(`Failed to start exercise counter: ${stderr || error.message}`);
     }
     console.log(`✅ Started ${scriptName}`);
+    console.log(`stdout: ${stdout}`);
     res.send(`Exercise "${exercise}" counter started`);
   });
 });
