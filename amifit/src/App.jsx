@@ -9,6 +9,7 @@ import Recommendation from "./pages/RecommendationPage"
 import BMICalculatorPage from "./pages/BMICalculatorPage"
 import BMRCalculatorPage from "./pages/BMRCalculatorPage"
 import CalorieCalculatorPage from "./pages/CalorieCalculatorPage"
+import ContactPage from './pages/ContactPage';
 import "./index.css"
 
 const App = () => {
@@ -24,6 +25,7 @@ const App = () => {
             <Route path="/BMICalculatorPage" element={<BMICalculatorPage />} />
             <Route path="/BMRCalculatorPage" element={<BMRCalculatorPage />} />
             <Route path="/CalorieCalculatorPage" element={<CalorieCalculatorPage />} />
+            <Route path="/contact" element={<ContactPage />} />
           </Routes>
         </main>
         <Footer />

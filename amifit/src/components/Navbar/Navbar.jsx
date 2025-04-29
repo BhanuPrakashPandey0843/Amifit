@@ -44,8 +44,8 @@ const Navbar = () => {
           </ul>
         </nav>
 
-        <Link to="/signup" className="btn btn-primary">
-          Sign Up
+        <Link to="/contact" className="btn btn-primary">
+        Contact-Us
         </Link>
 
         <button className="nav-toggle-btn" onClick={toggleNavbar} aria-label="open menu">
