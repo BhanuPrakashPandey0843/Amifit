@@ -1,11 +1,11 @@
 import React from 'react'
-
-const BMRCalculator = () => {
+import BMRCalculator from "../components/BMRCalculator/BMRCalculator"
+const BMRCalculatorPage = () => {
   return (
     <div>
-      
+      <BMRCalculator />
     </div>
   )
 }
 
-export default BMRCalculator
+export default BMRCalculatorPage
