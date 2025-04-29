@@ -70,34 +70,36 @@ const BMRCalculator = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-green-50 to-green-100 py-16 px-6 flex justify-center items-center">
       <div className="bg-white rounded-3xl shadow-xl p-10 w-full max-w-3xl">
-        <h1 className="text-4xl font-bold text-center text-green-700 mb-10">
+        <h1 className="text-4xl font-semibold text-center text-green-800 mb-12">
           💪 BMR & Calorie Calculator
         </h1>
 
         {error && <div className="text-red-600 mb-4 font-medium">{error}</div>}
 
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid md:grid-cols-2 gap-8">
           {/* Gender */}
           <div>
-            <p className="text-lg font-semibold mb-2 flex items-center gap-2">
+            <p className="text-lg font-semibold mb-2 flex items-center gap-3 text-green-800">
               <FaVenus /> Gender
             </p>
             <div className="flex gap-6">
-              <label className="flex items-center gap-2">
+              <label className="flex items-center gap-2 text-gray-700">
                 <input
                   type="radio"
                   value="1"
                   checked={gender === "1"}
                   onChange={(e) => setGender(e.target.value)}
+                  className="form-radio text-green-500"
                 />
                 Female
               </label>
-              <label className="flex items-center gap-2">
+              <label className="flex items-center gap-2 text-gray-700">
                 <input
                   type="radio"
                   value="2"
                   checked={gender === "2"}
                   onChange={(e) => setGender(e.target.value)}
+                  className="form-radio text-green-500"
                 />
                 Male
               </label>
@@ -106,32 +108,34 @@ const BMRCalculator = () => {
 
           {/* Weight */}
           <div>
-            <p className="text-lg font-semibold mb-2 flex items-center gap-2">
+            <p className="text-lg font-semibold mb-2 flex items-center gap-3 text-green-800">
               <FaWeight /> Weight
             </p>
-            <div className="flex gap-4 mb-2">
-              <label className="flex items-center gap-2">
+            <div className="flex gap-6 mb-2">
+              <label className="flex items-center gap-2 text-gray-700">
                 <input
                   type="radio"
                   value="1"
                   checked={weightType === "1"}
                   onChange={(e) => setWeightType(e.target.value)}
+                  className="form-radio text-green-500"
                 />
                 lbs
               </label>
-              <label className="flex items-center gap-2">
+              <label className="flex items-center gap-2 text-gray-700">
                 <input
                   type="radio"
                   value="2"
                   checked={weightType === "2"}
                   onChange={(e) => setWeightType(e.target.value)}
+                  className="form-radio text-green-500"
                 />
                 kg
               </label>
             </div>
             <input
               type="number"
-              className="w-full border border-gray-300 rounded-lg p-2"
+              className="w-full border border-gray-300 rounded-lg p-4 text-lg"
               value={weight}
               onChange={(e) => setWeight(e.target.value)}
               placeholder="Enter your weight"
@@ -140,21 +144,21 @@ const BMRCalculator = () => {
 
           {/* Height */}
           <div>
-            <p className="text-lg font-semibold mb-2 flex items-center gap-2">
+            <p className="text-lg font-semibold mb-2 flex items-center gap-3 text-green-800">
               <FaRulerVertical /> Height
             </p>
             <div className="flex gap-4">
               <input
                 type="number"
                 placeholder="Feet"
-                className="w-1/2 border border-gray-300 rounded-lg p-2"
+                className="w-1/2 border border-gray-300 rounded-lg p-4 text-lg"
                 value={heightFeet}
                 onChange={(e) => setHeightFeet(e.target.value)}
               />
               <input
                 type="number"
                 placeholder="Inches"
-                className="w-1/2 border border-gray-300 rounded-lg p-2"
+                className="w-1/2 border border-gray-300 rounded-lg p-4 text-lg"
                 value={heightInches}
                 onChange={(e) => setHeightInches(e.target.value)}
               />
@@ -163,13 +167,13 @@ const BMRCalculator = () => {
 
           {/* Age */}
           <div>
-            <p className="text-lg font-semibold mb-2 flex items-center gap-2">
+            <p className="text-lg font-semibold mb-2 flex items-center gap-3 text-green-800">
               <FaClock /> Age
             </p>
             <input
               type="number"
               placeholder="Enter your age"
-              className="w-full border border-gray-300 rounded-lg p-2"
+              className="w-full border border-gray-300 rounded-lg p-4 text-lg"
               value={age}
               onChange={(e) => setAge(e.target.value)}
             />
@@ -182,14 +186,14 @@ const BMRCalculator = () => {
             calculateBMR();
             setShowWork(true);
           }}
-          className="w-full mt-10 bg-green-600 text-white py-3 rounded-xl text-lg font-semibold hover:bg-green-700 transition"
+          className="w-full mt-8 bg-green-600 text-white py-4 rounded-xl text-lg font-semibold hover:bg-green-700 transition-all ease-in-out duration-300"
         >
           🔍 Calculate BMR
         </button>
 
         {bmr && (
-          <div className="bg-green-50 border border-green-300 rounded-xl p-6 mt-6 text-center">
-            <h2 className="text-2xl font-bold text-green-800">
+          <div className="bg-green-50 border border-green-300 rounded-xl p-6 mt-6 text-center shadow-lg">
+            <h2 className="text-3xl font-semibold text-green-800">
               Your BMR: {bmr} kcal/day
             </h2>
             <p className="text-gray-600 mt-2 text-sm">{suggestion}</p>
@@ -199,11 +203,11 @@ const BMRCalculator = () => {
         {/* Activity level & calorie calculation */}
         {showWork && (
           <div className="mt-8">
-            <label className="block text-lg font-semibold mb-2">
+            <label className="block text-lg font-semibold mb-2 text-gray-800">
               Choose Your Activity Level:
             </label>
             <select
-              className="w-full border border-gray-300 rounded-lg p-3 mb-4"
+              className="w-full border border-gray-300 rounded-lg p-4 text-lg mb-6"
               value={activity}
               onChange={(e) => setActivity(e.target.value)}
             >
@@ -218,14 +222,14 @@ const BMRCalculator = () => {
             </select>
             <button
               onClick={calculateCalories}
-              className="w-full bg-blue-600 text-white py-3 rounded-xl text-lg font-semibold hover:bg-blue-700 transition"
+              className="w-full bg-blue-600 text-white py-4 rounded-xl text-lg font-semibold hover:bg-blue-700 transition-all ease-in-out duration-300"
             >
               🔥 Calculate Calorie Needs
             </button>
 
             {pal && (
-              <div className="mt-6 bg-blue-50 border border-blue-300 rounded-xl p-6 text-center">
-                <h2 className="text-2xl font-bold text-blue-800">
+              <div className="mt-6 bg-blue-50 border border-blue-300 rounded-xl p-6 text-center shadow-lg">
+                <h2 className="text-3xl font-semibold text-blue-800">
                   Daily Calorie Needs: {pal} kcal
                 </h2>
               </div>
