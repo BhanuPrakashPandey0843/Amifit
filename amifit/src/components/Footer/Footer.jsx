@@ -38,14 +38,14 @@ const Footer = () => (
           <li><a href="#" className="footer-link">Saturday: 9 AM – 4 PM</a></li>
           <li><a href="#" className="footer-link">Sunday: Closed</a></li>
           <li><p className="footer-list-title address-title">Location</p></li>
-          <li><address className="address">176 W street name, New<br />York, NY 10014</address></li>
+          <li><address className="address">176 W street name, New<br />India</address></li>
         </ul>
       </div>
     </div>
     <div className="footer-bottom">
       <div className="container">
         <p className="copyright">
-          &copy; 2022 Futras Made With <ion-icon name="heart"></ion-icon> by <a href="#" className="copyright-link">codewithsadee</a>
+          &copy; 2025 AmiFit<ion-icon name="heart"></ion-icon> by <a href="#" className="copyright-link">Bhanu Prakash Pandey</a>
         </p>
         <ul className="footer-bottom-list">
           {['Terms of Service', 'Privacy Policy', 'Sitemap', 'Security'].map((item, idx) => (

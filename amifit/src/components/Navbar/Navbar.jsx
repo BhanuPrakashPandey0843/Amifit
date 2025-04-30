@@ -32,7 +32,7 @@ const Navbar = () => {
               { name: 'Home', path: '/' },
               { name: 'Counter', path: '/counter' },
               { name: 'Course', path: '/course' },
-              { name: 'Blog', path: '/blog' },
+              { name: 'Dite', path: 'https://diet-recommendation-system.streamlit.app/' },
               { name: 'Contact', path: '/contact' },
             ].map((item) => (
               <li key={item.name} className="navbar-item">
