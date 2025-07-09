@@ -1,10 +1,4 @@
-Based on your detailed project and documentation, here is a **fully professional, visually structured, and attractive `README.md`** file for your GitHub repository:
-📎 Repo: [https://github.com/BhanuPrakashPandey0843/Amifit.git](https://github.com/BhanuPrakashPandey0843/Amifit.git)
-🌐 Live Demo: [https://amifitntcc.netlify.app](https://amifitntcc.netlify.app)
 
----
-
-```md
 # 🧠 Amifit: AI-Powered Smart Fitness Assistant
 
 ![Amifit Banner](./Amifit%20Banner.png)
