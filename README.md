@@ -1,5 +1,5 @@
 
-# 🧠 Amifit: AI-Powered Smart Fitness Assistant
+# Amifit: AI-Powered Smart Fitness Assistant
 
 ![Amifit Banner](./Amifit%20Banner.png)
 
